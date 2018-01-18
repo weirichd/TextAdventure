@@ -2,13 +2,13 @@ print('Welcome to Adventure')
 
 char_name = input("Please input your character's name: ")
 
-print('Please select a class:')
-print('1 - Warrior')
-print('2 - Archer')
-
 class_selected = False
 
 while not class_selected:
+    print('Please select a class:')
+    print('1 - Warrior')
+    print('2 - Archer')
+
     selection = input()
 
     if selection == '1':
@@ -30,7 +30,7 @@ while not class_selected:
         gold = 10
         class_selected = True
     else:
-        print('Please enter either 1 or 2')
+        print('Please enter 1 or 2.')
 
 print('Introducing {}, the brave {}!!'.format(char_name, char_class))
 
@@ -52,7 +52,31 @@ def fight_monster():
 
 
 def visit_town():
-    print('Visit town')
+    print('Welcome to the local town.')
+
+    done_in_town = False
+
+    while not done_in_town:
+        print('What would you like to do in town?')
+        print('1 - Visit the shop')
+        print('2 - Visit the inn')
+        print('3 - Talk to someone')
+        print('4 - Leave town')
+
+        selection = input()
+
+        if selection == '1':
+            print('The shop')
+        elif selecton == '2':
+            print('The inn')
+        elif selection == '3':
+            print('Talk to someone')
+        elif selection == 4:
+            done_in_town = True
+        else:
+            print('Please enter 1, 2, 3, or 4.') 
+
+    print('You decided to leave the town')
 
 
 while not (game_over or game_won):
@@ -73,7 +97,7 @@ while not (game_over or game_won):
     elif selection == '4':
         game_over = True
     else:
-        print('Please enter either 1, 2, 3, or 4')
+        print('Please enter 1, 2, 3, or 4.')
 
 
 if game_over:
