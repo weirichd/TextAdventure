@@ -12,6 +12,7 @@ while not class_selected:
     selection = input()
 
     if selection == '1':
+        char_level = 1
         char_class = 'Warrior'
         attack = 3
         defense = 7
@@ -21,6 +22,7 @@ while not class_selected:
         gold = 10
         class_selected = True
     elif selection == '2':
+        char_level = 1
         char_class = 'Archer'
         attack = 5
         defense = 4
@@ -37,9 +39,10 @@ print('Introducing {}, the brave {}!!'.format(char_name, char_class))
 game_over = False
 game_won = False
 
+
 def display_stats():
     print('Current Stats:')
-    print('{} the {}'.format(char_name, char_class))
+    print('{} - Level {} {}'.format(char_name, char_level, char_class))
     print('HP:      {}/{}'.format(hp, max_hp))
     print('Attack:  {}'.format(attack))
     print('Defense: {}'.format(defense))
