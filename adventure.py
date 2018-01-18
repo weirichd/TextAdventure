@@ -16,12 +16,18 @@ while not class_selected:
         attack = 3
         defense = 7
         hp = 12
+        max_hp = 12
+        weapon = 'Sword'
+        gold = 10
         class_selected = True
     elif selection == '2':
         char_class = 'Archer'
         attack = 5
         defense = 4
         hp = 10
+        max_hp = 10
+        weapon = 'Bow'
+        gold = 10
         class_selected = True
     else:
         print('Please enter either 1 or 2')
@@ -32,7 +38,13 @@ game_over = False
 game_won = False
 
 def display_stats():
-    print('Display stats')
+    print('Current Stats:')
+    print('{} the {}'.format(char_name, char_class))
+    print('HP:      {}/{}'.format(hp, max_hp))
+    print('Attack:  {}'.format(attack))
+    print('Defense: {}'.format(defense))
+    print('Weapon:  {}'.format(weapon))
+    print('Gold:    {}'.format(gold))
 
 
 def fight_monster():
