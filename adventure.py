@@ -276,7 +276,7 @@ def fight_monster():
         print('2 - Troll')
         print('3 - Wondering Bandit')
         print('4 - Dragon')
-        print('6 - ??????')
+        print('5 - ??????')
         print('6 - Head back to town')
 
         selection = input()
